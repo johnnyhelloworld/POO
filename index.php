@@ -72,3 +72,12 @@ echo $truck->brake();
 echo '<br> Le camion est chargé à ' . $truck->getLoading() . ' T. (' . $truck->isFull() . ')' . '<br>';
 $truck->setLoading(50);
 echo '<br> Le camion est chargé à ' . $truck->getLoading() . ' T. (' . $truck->isFull() . ')' . '<br>';
+
+$car->setParkBrake(true);
+try{
+    $car->start();
+} catch(Exception $e){
+    echo "Exception received : ". $e->getMessage() . "<br>";
+} finally {
+    echo "Ma voiture roule comme un donut";
+}

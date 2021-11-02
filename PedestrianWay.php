@@ -10,11 +10,11 @@ final class PedestrianWay extends HighWay
     public function addVehicle(Vehicle $vehicle)
     {
         if($vehicle instanceof Bicycle || $vehicle instanceof Skateboard){
-            echo "Type de transport autorisé sur cette voie";
+            echo "Type de transport autorisé sur cette voie" . "<br>";
             $this->currentVehicles[] = $vehicle;
         }
         else{
-            echo "Type de transport NON autorisé sur cette voie";
+            echo "Type de transport NON autorisé sur cette voie" . "<br>";
         }
     }
 }
